@@ -74,7 +74,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Decl.cpp" />
+    <ClCompile Include="expr.cpp" />
     <ClCompile Include="Lex.cpp" />
+    <ClCompile Include="stmt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
