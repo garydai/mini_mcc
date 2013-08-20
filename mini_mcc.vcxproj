@@ -79,6 +79,10 @@
     <ClCompile Include="Lex.cpp" />
     <ClCompile Include="stmt.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Lex.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
