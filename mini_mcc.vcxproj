@@ -74,12 +74,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Compiler.cpp" />
     <ClCompile Include="Decl.cpp" />
     <ClCompile Include="expr.cpp" />
     <ClCompile Include="Lex.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="stmt.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ast.h" />
+    <ClInclude Include="Compiler.h" />
+    <ClInclude Include="Decl.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="Lex.h" />
   </ItemGroup>

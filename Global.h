@@ -6,7 +6,9 @@
 //C有22+10 = 32个关键字
 #define token_type int
 
-enum
+#define MAX_TOKEN_LEN 100
+
+typedef enum
 {
 	//标示符
 	ID,
@@ -14,8 +16,19 @@ enum
 	INT,
 	FLOAT,
 	IF,
-	ELSE
-};
+	ELSE,
+	//操作符
+	PLUS,		//+
+	ASSIGN,		//=
+	PLUS_EQUAL, //+=
+	MINUS,      //-
+	MINUS_EQUAL,//-
+	EQUAL,		//==
+	MUL,		//*
+	MUL_EQUAL,	//*=
+	DIV,	    ///
+	DIV_EQUAL,	///=
+}type;
 
 
 

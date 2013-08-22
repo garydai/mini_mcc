@@ -27,12 +27,27 @@
     <ClCompile Include="Decl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Compiler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Decl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
