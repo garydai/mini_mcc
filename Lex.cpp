@@ -1,21 +1,21 @@
 
 #include "Lex.h"
-token_type Lex::GetToken()
+token_type Lex::get_token()
 {
 	//ÂÔ¹ý¿Õ¸ñ
-	while(*(text) == ' ')
+	while(*(cur_char) == ' ')
 	{
-		text ++;
+		cur_char ++;
 	}
 
 	token_type type = -1;
-	switch (*text)
+	switch (*cur_char)
 	{
 	case 'i':
 		{
-			if((text + 1)!= 0 && (text + 2)!= 0)
+			if((cur_char + 1)!= 0 && (cur_char + 2)!= 0)
 			{
-				if(*(text + 1) == 'n' && *(text + 2) == 't')
+				if(*(cur_char + 1) == 'n' && *(cur_char + 2) == 't')
 				{
 					type = INT;
 					break;
@@ -26,7 +26,7 @@ token_type Lex::GetToken()
 		}
 	case '=':
 		{
-			if((text + 1) != 0 && *(text + 1) == '=')
+			if((cur_char + 1) != 0 && *(cur_char + 1) == '=')
 			{
 				type = ASSIGN;
 			}
@@ -38,7 +38,7 @@ token_type Lex::GetToken()
 		}
 	case '+':
 		{
-			if((text + 1) != 0 && *(text + 1) == '=')
+			if((cur_char + 1) != 0 && *(cur_char + 1) == '=')
 			{
 				type = PLUS_EQUAL;
 			}
@@ -50,7 +50,7 @@ token_type Lex::GetToken()
 		}
 	case '-':
 		{
-			if((text + 1) != 0 && *(text + 1) == '=')
+			if((cur_char + 1) != 0 && *(cur_char + 1) == '=')
 			{
 				type = MINUS_EQUAL;
 			}
@@ -62,7 +62,7 @@ token_type Lex::GetToken()
 		}
 	case '*':
 		{
-			if((text + 1) != 0 && *(text + 1) == '=')
+			if((cur_char + 1) != 0 && *(cur_char + 1) == '=')
 			{
 				type = MUL_EQUAL;
 			}
@@ -74,7 +74,7 @@ token_type Lex::GetToken()
 		}
 	case '/':
 		{
-			if((text + 1) != 0 && *(text + 1) == '=')
+			if((cur_char + 1) != 0 && *(cur_char + 1) == '=')
 			{
 				type = DIV_EQUAL;
 			}
@@ -88,23 +88,24 @@ token_type Lex::GetToken()
 
 	//value
 	int i = 0;
-	while(*text != ' ' && *text != 0)
+	while(*cur_char != ' ' && *cur_char != 0)
 	{
-		current_token[i++] = *text;
-		text ++;
+		cur_token[i++] = *cur_char;
+		cur_char ++;
 	}
-	current_token[i] = 0;
+	cur_token[i] = 0;
 	
 	return type;
 }
 
-Lex::Lex(char* t)
+char* Lex::get_token_string()
 {
-	text = t;
+	return cur_token;
 }
 
-void Lex::SetText(char* t)
+char* Lex::get_char()
 {
-	text = t;
+	return cur_char;
 }
+
 

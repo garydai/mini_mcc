@@ -6,15 +6,28 @@
 class Lex
 {
 public:
-	Lex(char* t);
+	Lex(char* t)
+	{
+		text	 = t;
+		cur_char = t;
+	}
 
-	int GetToken();
+	int get_token();
 
 	void SetText(char* t);
 
+	char* get_token_string();
+
+	char* get_char();
+
+private:
+
 	char* text;
 
-	char current_token[MAX_TOKEN_LEN];
+	char* cur_char;
+
+	char cur_token[MAX_TOKEN_LEN];
+
 };
 
 #endif
